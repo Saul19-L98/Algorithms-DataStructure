@@ -1,0 +1,23 @@
+{
+  "name": "algocasts",
+  "version": "1.0.0",
+  "description": "Companion repo to [The Coding Inteview Bootcamp: Algorithms + Data Structures](https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephenGrider/AlgoCasts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StephenGrider/AlgoCasts/issues"
+  },
+  "homepage": "https://github.com/StephenGrider/AlgoCasts#readme",
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
+}

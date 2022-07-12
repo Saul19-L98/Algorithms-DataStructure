@@ -9,6 +9,10 @@ class Queue {
     this.data = [];
   }
 
+  peek(){
+    return this.data[this.data.length - 1];
+  }
+
   add(record) {
     this.data.unshift(record);
   }
@@ -17,5 +21,17 @@ class Queue {
     return this.data.pop();
   }
 }
+
+// const myQueue = new Queue();
+// console.dir(myQueue.add(1));
+// console.dir(myQueue.add(2));
+// console.dir(myQueue.add(3));
+// console.dir(myQueue.data);
+// console.log(myQueue.peek());
+// console.log(myQueue.remove());
+// console.log(myQueue.remove());
+// console.log(myQueue.remove());
+// console.log(myQueue.remove());
+// console.log(myQueue.peek());
 
 module.exports = Queue;

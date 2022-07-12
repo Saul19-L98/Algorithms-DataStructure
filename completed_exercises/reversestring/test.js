@@ -1,13 +1,13 @@
 const reverse = require('./index');
 
 test('Reverse function exists', () => {
-  expect(reverse).toBeDefined();
+  expect(myReverse).toBeDefined();
 });
 
 test('Reverse reverses a string', () => {
-  expect(reverse('abcd')).toEqual('dcba');
+  expect(myReverse('saul')).toEqual('luas');
 });
 
 test('Reverse reverses a string', () => {
-  expect(reverse('  abcd')).toEqual('dcba  ');
+  expect(myReverse('apple')).toEqual('elppa');
 });

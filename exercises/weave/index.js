@@ -1,7 +1,7 @@
 // --- Directions
 // 1) Complete the task in weave/queue.js
 // 2) Implement the 'weave' function.  Weave
-// receives two queues as arguments and combines the
+//  receives two queues as arguments and combines the
 // contents of each into a new, third queue.
 // The third queue should contain the *alterating* content
 // of the two queues.  The function should handle
@@ -22,8 +22,64 @@
 //    q.remove() // 2
 //    q.remove() // 'There'
 
+///////////////////////////////////////////////////////////////////////////////////
+//First try.
+
+// function weave (sourceOne, sourceTwo){
+//     this.data = [];
+//     while(sourceOne.data.length !==0 || sourceTwo.data.length !==0){
+//         if(sourceOne.data.length !==0){
+//             this.data.push(sourceOne.peek());
+//             sourceOne.remove();
+//         }
+//         if(sourceTwo.data.length !==0){
+//             this.data.push(sourceTwo.peek());
+//             sourceTwo.remove();
+//         }
+//     }
+//     this.add = function(record){
+//         return this.data.unshift(record);
+//     }
+//     this.remove = function(){
+//         return this.data.pop();
+//     }
+//     this.peek = function(){
+//         return this.data[this.data.length - 1];
+//     }
+//     return this.data;
+// }
+///////////////////////////////////////////////////////////////////////////////////
+
 const Queue = require('./queue');
 
-function weave(sourceOne, sourceTwo) {}
+// |==>Solution 1.
+// function weave (sourceOne, sourceTwo){
+//     const q = new Queue();
+//     while(sourceOne.peek() || sourceTwo.peek()){
+//         if(sourceOne.peek()){
+//             q.data.push(sourceOne.peek());
+//             sourceOne.remove();
+//         }
+//         if(sourceTwo.peek()){
+//             q.data.push(sourceTwo.peek());
+//             sourceTwo.remove();
+//         }
+//     }
+//     return q;
+// }
+
+// |==>Solution 2.
+function weave (sourceOne, sourceTwo){
+    const q = new Queue();
+    while(sourceOne.peek() || sourceTwo.peek()){
+        if(sourceOne.peek()){
+            q.add(sourceOne.remove());
+        }
+        if(sourceTwo.peek()){
+            q.add(sourceTwo.remove());
+        }
+    }
+    return q;
+}
 
 module.exports = weave;
