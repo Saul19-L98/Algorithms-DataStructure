@@ -93,6 +93,6 @@ function slowFib(n){
 
 const fib = memonize(slowFib);
 
-//onsole.log(fib(4));
+//console.log(fib(4));
 
 module.exports = fib;

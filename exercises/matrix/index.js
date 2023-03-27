@@ -63,7 +63,7 @@ function matrix(n){
             counter++;
         }
         end_column--;
-        //3 bottom rom
+        //3 bottom row
         for(let i = end_column; i >= start_column;i--){
             results[end_row][i] = counter;
             counter++;
